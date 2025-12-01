@@ -5,7 +5,7 @@ Aquest petit projecte permet executar el navegador **Firefox** dins d’un conte
 
 Evita que el navegador corri directament com l'usuari del host, que tingui accés directe al sistema de fitxers i a l'espai de processos del host. El navegador corre amb un usuari no privilegiat dins d'un contenidor i totes les dades que genera (descàrregues, bookmarks, configuració, cookies, etc.) queden persistents a una carpeta definida.
 
-Això aporta un punt extra de **seguretat** quan es vol navegar per llocs web en què no es té plena confiança, però no ofereix seguretat absoluta, no eximeix de l'ús antivirus.
+Això aporta un punt extra de **seguretat** quan es vol navegar per llocs web en què no es té plena confiança, però no ofereix seguretat absoluta, no eximeix de l'ús d'antivirus.
 
 **Autor:** Angel Galindo Muñoz  
 **Data:** 30/11/2025
