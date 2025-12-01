@@ -42,14 +42,14 @@ if [ $? -ne 0 -o -z "$LLAR_USUARI_NO_PRIVILEGIAT" -o ! -d "$LLAR_USUARI_NO_PRIVI
 fi
 
 echo "Creant carpetes:"
-HOST_DATA_DIR=$LLAR_USUARI_NO_PRIVILEGIAT/podman_firefox_rootfs
+HOST_DATA_DIR=$LLAR_USUARI_NO_PRIVILEGIAT/firefox_engabiat.dades
 
 mkdir -p $HOST_DATA_DIR           # Directori principal de dades
 # mkdir -p $HOST_DATA_DIR/profile   # perfil de Firefox
 # mkdir -p $HOST_DATA_DIR/downloads # Descàrregues
 
 carpeta_dels_scripts=$(dirname "$0")
-cp -R "$carpeta_dels_scripts" "$LLAR_USUARI_NO_PRIVILEGIAT"/
+cp -R "$carpeta_dels_scripts/" "$LLAR_USUARI_NO_PRIVILEGIAT/"
 
 # Propietari per l'usuari no privilegiat per a que hi pugui escriure:
-chown -R $USERNAME_USUARI_NO_PRIVILEGIAT:$GROUPNAME_USUARI_NO_PRIVILEGIAT $HOST_DATA_DIR
+chown -R $USERNAME_USUARI_NO_PRIVILEGIAT:$GROUPNAME_USUARI_NO_PRIVILEGIAT "$HOST_DATA_DIR"

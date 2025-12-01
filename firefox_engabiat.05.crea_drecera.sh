@@ -20,7 +20,7 @@ cat > ~/.local/share/applications/firefox-segur.desktop <<EOF
 Version=1.0
 Type=Application
 Name=Firefox engabiat
-Comment=Navegador Firefox aïllat amb Podman (Utilitza perfil persistent)
+Comment=Navegador Firefox aïllat amb Podman rootless, guardant el perfil en carpeta persistent
 Exec=$SCRIPT_EXEC_FIREFOX_ENGABIAT
 Icon=firefox
 Terminal=true

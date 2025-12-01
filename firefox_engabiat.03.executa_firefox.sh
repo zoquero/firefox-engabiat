@@ -24,9 +24,9 @@ if [ -z "$GROUPNAME_USUARI_NO_PRIVILEGIAT" ]; then
 fi
 
 # Carpeta pel firefox engabiat al host
-HOST_DATA_DIR="$LLAR_USUARI_NO_PRIVILEGIAT/podman_firefox_rootfs"
+HOST_DATA_DIR="$LLAR_USUARI_NO_PRIVILEGIAT/firefox_engabiat.dades"
 # Carpeta llar de l'usuari dins del contenidor
-CONTAINER_ROOT_DIR="/root"
+CONTAINER_ROOT_DIR="/$USERNAME_USUARI_NO_PRIVILEGIAT"
 
 UID_ACTUAL=$(id --user)
 if [ "$UID_ACTUAL" != "$UID_USUARI_NO_PRIVILEGIAT" ]; then
@@ -44,7 +44,7 @@ echo "Iniciant Firefox aïllat amb Podman..."
 
 # Executem el contenidor:
 podman run --rm \
-    --name firefox_secure \
+    --name firefox_engabiat \
     --userns=keep-id \
     -e DISPLAY=$DISPLAY \
     -e HOME=$CONTAINER_ROOT_DIR \
